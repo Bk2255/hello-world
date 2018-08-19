@@ -1,0 +1,12 @@
+/*This file contains the code to print or display HELLO WORLD meassge using C language */
+//linking section
+#include<stdio.h>  //standard input output library header file 
+#include<conio.h> // console header file
+void main() // main fuction 
+{
+
+  printf("HELLO WORLD"); // printf("");  is used to print any meassage written  in double quotes
+ 
+ getch(); //To hold output on the screen 
+ 
+}
