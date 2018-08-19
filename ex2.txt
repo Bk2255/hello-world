@@ -1,0 +1,77 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void main()
+{
+
+char *memalloc;
+
+clrscr();
+
+//malloc();
+
+memalloc=malloc(25 * (sizeof(char));
+
+if(memalloc==NULL)
+{
+printf("Memory Is not Allocated!");
+}
+else
+{
+strcpy(memalloc,"Bk Kothari");
+}
+
+
+printf("%s\n",memalloc);
+
+
+
+//calloc();
+
+memalloc=calloc(23,sizeof(char));
+
+if(memalloc==NULL)
+{
+printf("Contunuous Memory is not allocated!");
+}
+else
+{
+strcpy(memalloc,"Bhavik Kothari");
+}
+
+
+printf("%s\n",memalloc);
+
+
+
+//realloc();
+
+
+memalloc=realloc(memalloc,sizeof(char));
+
+if(memaloc==NULL)
+{
+printf("Memory is not Reallocate!");
+}
+else
+{
+strcpy(memalloc,"Bhavik");
+}
+
+
+printf("%s\n",memalloc);
+
+
+
+//free();
+
+
+
+free(memalloc);
+
+
+getch();
+
+}

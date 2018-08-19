@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+
+void value(int num1,int num2)
+{   int t;
+     t=num1;
+     num1=num2;
+     num2=t;
+}
+void reference(int *num1,int *num2)
+{
+    int t;
+     t=*num1;
+     *num1=*num2;
+     *num2=t;
+}
+
+void main()
+{
+int x=100,y=200;
+clrscr();
+printf("Call By Value\n\nBefore  function call:\n x=%d \n y=%d ",x,y);
+value(x,y);
+printf("\nAfter function call:\n x=%d \n y=%d \n",x,y);
+
+printf("\nCall By Reference\n\nBefor function call :\n x=%d \n y=%d",x,y);
+reference(&x,&y);
+printf("\nAfter function call :\n x=%d \n y=%d",x,y);
+getch();
+}

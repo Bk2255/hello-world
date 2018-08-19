@@ -1,0 +1,63 @@
+/*A program to implement binary search*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[100],b,c,d,e,i,m,n,t,v;
+clrscr();
+
+printf("Enter the Number of Elements:");
+scanf("%d",&n);
+
+printf("Enter %d Elements :\n",n);
+
+for(i=0;i<n;i++)
+{
+ scanf("%d",&a[i]);
+}
+
+//to  sort the elements(INSERTION_SOTRT();)
+
+for(c=0;c<n;c++)
+{
+	t=a[c];
+	d=c-1;
+	while((d>=0) && (a[d]>t))
+	{
+
+	a[d+1]=a[d];
+	d--;
+	}
+	a[d+1]=t;
+}
+
+printf("\nEnter the element for search :");
+scanf("%d",&v);
+//binary_search();
+b=0;
+e=n-1;
+m=(b+e)/2;
+
+ while(b<=e)
+ {
+	if(a[m]==v)
+	{
+	  printf("Mil Gaya ... Mil Gaya... %d Hamko Mil Gaya..\n",a[m]);
+	  break;
+	}
+	else if(a[m]>v)
+	{
+	  e=m-1;
+	}
+	else
+	{
+	  b=m+1;
+	}
+	  m=(b+e)/2;
+ }
+ if(b>e)
+ {
+  printf("Nahi mila ... %d nahi mila ERROR 404",v);
+ }
+getch();
+}
